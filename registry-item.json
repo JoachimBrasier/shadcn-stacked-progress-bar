@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "stacked-progress-bar",
+  "homepage": "https://github.com/JoachimBrasier/shadcn-stacked-progress-bar",
+  "name": "stacked-progress-bar",
+  "type": "registry:ui",
+  "author": "JoachimBrasier",
+  "files": [
+    {
+      "path": "src/stacked-progress-bar.tsx",
+      "type": "registry:ui"
+    }
+  ],
+  "dependencies": [
+    "react",
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "utils"
+  ]
+}

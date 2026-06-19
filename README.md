@@ -2,6 +2,10 @@
 
 A composable stacked progress bar for shadcn/ui to display multiple statuses in one track, with optional legend, tooltips, and accessible semantics.
 
+## Prerequisites
+
+- React 19+
+
 ## Installation
 
 ```bash
