@@ -37,7 +37,7 @@ npx shadcn@latest add https://raw.githubusercontent.com/JoachimBrasier/shadcn-st
 
 ### Method 2: Manual Installation
 
-If you prefer manual control, copy the stacked-progress-bar.tsx file into your components directory (e.g., src/stacked-progress-bar.tsx).
+If you prefer manual control, copy the stacked-progress-bar.tsx file into your components directory.
 
 ### Usage
 
