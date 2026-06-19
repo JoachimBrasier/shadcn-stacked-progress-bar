@@ -1,6 +1,6 @@
 # shadcn-stacked-progress-bar
 
-A composable stacked progress bar for shadcn/ui.
+A composable stacked progress bar for shadcn/ui to display multiple statuses in one track, with optional legend, tooltips, and accessible semantics.
 
 ## Installation
 
