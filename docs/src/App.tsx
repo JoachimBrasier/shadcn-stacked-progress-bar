@@ -1,7 +1,7 @@
 import {
-  ComponentProps,
-  CSSProperties,
-  ReactNode,
+  type ComponentProps,
+  type CSSProperties,
+  type ReactNode,
   createContext,
   useContext,
   useMemo,
