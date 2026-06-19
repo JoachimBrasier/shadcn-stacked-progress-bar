@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/stacked-progress-bar.json",
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "stacked-progress-bar",
   "type": "registry:ui",
   "description": "A composable stacked progress bar for shadcn/ui to display multiple statuses in one track, with optional legend, tooltips, and accessible semantics.",
@@ -15,7 +15,7 @@
   "files": [
     {
       "path": "src/stacked-progress-bar.tsx",
-      "type": "registry:component"
+      "type": "registry:ui"
     }
   ]
 }
