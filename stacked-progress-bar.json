@@ -15,7 +15,7 @@
   "files": [
     {
       "path": "src/stacked-progress-bar.tsx",
-      "type": "registry:ui"
+      "type": "registry:component"
     }
   ]
 }
