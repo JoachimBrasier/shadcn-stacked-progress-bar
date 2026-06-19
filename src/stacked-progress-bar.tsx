@@ -147,7 +147,7 @@ export function StackedProgressBarLegendDot({
   variant = "default",
   "aria-hidden": ariaHidden = true,
   ...props
-}: React.ComponentProps<"div"> &
+}: React.ComponentProps<"span"> &
   VariantProps<typeof stackedProgressBarLegendDotVariant>) {
   return (
     <span
