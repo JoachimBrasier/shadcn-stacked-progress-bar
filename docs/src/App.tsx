@@ -371,7 +371,7 @@ function App() {
               <pre className="overflow-x-auto rounded-lg bg-zinc-950 p-4 text-xs text-zinc-100">
                 <code>
                   npx shadcn add
-                  https://raw.githubusercontent.com/JoachimBrasier/shadcn-stacked-progress-bar/main/registry-item.json
+                  https://raw.githubusercontent.com/JoachimBrasier/shadcn-stacked-progress-bar/main/stacked-progress-bar.json
                 </code>
               </pre>
             </div>

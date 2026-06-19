@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/stacked-progress-bar.json",
+  "name": "stacked-progress-bar",
+  "type": "registry:ui",
+  "description": "A composable stacked progress bar for shadcn/ui to display multiple statuses in one track, with optional legend, tooltips, and accessible semantics.",
+  "homepage": "https://github.com/JoachimBrasier/shadcn-stacked-progress-bar",
+  "author": "JoachimBrasier",
+  "dependencies": [
+    "react",
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/stacked-progress-bar.tsx",
+      "type": "registry:component"
+    }
+  ]
+}
