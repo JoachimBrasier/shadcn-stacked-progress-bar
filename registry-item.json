@@ -1,6 +1,5 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "stacked-progress-bar",
   "homepage": "https://github.com/JoachimBrasier/shadcn-stacked-progress-bar",
   "name": "stacked-progress-bar",
   "type": "registry:ui",

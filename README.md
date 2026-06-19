@@ -9,7 +9,7 @@ A composable stacked progress bar for shadcn/ui to display multiple statuses in 
 ## Installation
 
 ```bash
-npx shadcn add https://raw.githubusercontent.com/JoachimBrasier/shadcn-stacked-progress-bar/main/registry.json
+npx shadcn add https://raw.githubusercontent.com/JoachimBrasier/shadcn-stacked-progress-bar/main/registry-item.json
 ```
 
 ## Documentation
