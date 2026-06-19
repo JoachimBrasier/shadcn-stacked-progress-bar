@@ -8,7 +8,8 @@
   "files": [
     {
       "path": "src/stacked-progress-bar.tsx",
-      "type": "registry:ui"
+      "type": "registry:ui",
+      "target": "@ui/stacked-progress-bar.tsx"
     }
   ],
   "dependencies": [
