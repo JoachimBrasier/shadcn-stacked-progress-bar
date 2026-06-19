@@ -1,29 +1,18 @@
-"use client";
-import { cva, VariantProps } from "class-variance-authority";
-import {
-  ComponentProps,
-  createContext,
-  Dispatch,
-  SetStateAction,
-  use,
-  useEffect,
-  useId,
-  useState,
-} from "react";
-
+import { cva, type VariantProps } from "class-variance-authority";
+import * as React from "react";
 import { cn } from "@/lib/utils";
 
 type StackedProgressBarContextValue = {
   max: number;
   legendId: string | null;
-  setLegendId: Dispatch<SetStateAction<string | null>>;
+  setLegendId: React.Dispatch<React.SetStateAction<string | null>>;
 };
 
 const StackedProgressBarContext =
-  createContext<StackedProgressBarContextValue | null>(null);
+  React.createContext<StackedProgressBarContextValue | null>(null);
 
 function useStackedProgressBarContext(componentName: string) {
-  const context = use(StackedProgressBarContext);
+  const context = React.use(StackedProgressBarContext);
 
   if (!context) {
     throw new Error(
@@ -40,7 +29,7 @@ export function StackedProgressBarSegment({
   className,
   "aria-hidden": ariaHidden,
   ...props
-}: { value: number } & ComponentProps<"div">) {
+}: { value: number } & React.ComponentProps<"div">) {
   const { max } = useStackedProgressBarContext("StackedProgressBarSegment");
   const safeValue = Number.isFinite(value)
     ? Math.min(Math.max(value, 0), max)
@@ -69,7 +58,7 @@ export function StackedProgressBar({
   "aria-valuenow": ariaValueNow,
   "aria-valuetext": ariaValueText,
   ...props
-}: { value?: number } & ComponentProps<"div">) {
+}: { value?: number } & React.ComponentProps<"div">) {
   const context = useStackedProgressBarContext("StackedProgressBar");
   const max = context?.max ?? 100;
   const safeValue =
@@ -102,12 +91,12 @@ export function StackedProgressBarLegend({
   className,
   role,
   ...props
-}: ComponentProps<"div">) {
+}: React.ComponentProps<"div">) {
   const context = useStackedProgressBarContext("StackedProgressBarLegend");
-  const generatedId = useId();
+  const generatedId = React.useId();
   const legendId = id ?? generatedId;
 
-  useEffect(() => {
+  React.useEffect(() => {
     context.setLegendId((currentLegendId) => {
       if (currentLegendId && currentLegendId !== legendId) {
         console.warn(
@@ -158,7 +147,7 @@ export function StackedProgressBarLegendDot({
   variant = "default",
   "aria-hidden": ariaHidden = true,
   ...props
-}: ComponentProps<"div"> &
+}: React.ComponentProps<"div"> &
   VariantProps<typeof stackedProgressBarLegendDotVariant>) {
   return (
     <span
@@ -173,7 +162,7 @@ export function StackedProgressBarLegendDot({
 export function StackedProgressBarLegendLabel({
   className,
   ...props
-}: ComponentProps<"div">) {
+}: React.ComponentProps<"div">) {
   return (
     <span
       data-slot="stacked-progress-bar-legend-label"
@@ -187,7 +176,7 @@ export function StackedProgressBarLegendItem({
   className,
   role,
   ...props
-}: ComponentProps<"div">) {
+}: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="stacked-progress-bar-legend-item"
@@ -202,10 +191,10 @@ export function StackedProgressBarProvider({
   max = 100,
   ...props
 }: { max?: number } & Omit<
-  ComponentProps<typeof StackedProgressBarContext.Provider>,
+  React.ComponentProps<typeof StackedProgressBarContext.Provider>,
   "value"
 >) {
-  const [legendId, setLegendId] = useState<string | null>(null);
+  const [legendId, setLegendId] = React.useState<string | null>(null);
   const safeMax = Number.isFinite(max) && max > 0 ? max : 100;
 
   return (
